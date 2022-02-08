@@ -1,11 +1,12 @@
 import "./App.css";
+import MyFooter from "./components/MyFooter";
 import MyNavbar from "./components/MyNavbar";
 
 function App() {
   return (
     <div className="App">
       <MyNavbar />
-      <header className="App-header"></header>
+      <MyFooter />
     </div>
   );
 }
