@@ -12,6 +12,7 @@ const LatestRelease = () => (
               src={book.img}
               alt={book.title}
             />
+            <p>{book.title}</p>
           </Col>
         </div>
       ))}
