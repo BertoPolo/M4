@@ -1,4 +1,5 @@
 import React from "react";
+import CommentArea from "./CommentArea";
 import { Card } from "react-bootstrap";
 
 class SingleBook extends React.Component {
@@ -24,6 +25,8 @@ class SingleBook extends React.Component {
             <Card.Text>category : {this.props.category}</Card.Text>
           </Card.Body>
         </Card>
+
+        {/*  <CommentArea /> */}
       </>
     );
   }
