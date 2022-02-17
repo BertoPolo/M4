@@ -26,7 +26,7 @@ class SingleBook extends React.Component {
           </Card.Body>
         </Card>
 
-        {/*  <CommentArea /> */}
+        {this.state.selected && <CommentArea />}
       </>
     );
   }
