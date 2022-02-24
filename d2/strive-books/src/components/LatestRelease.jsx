@@ -1,23 +1,27 @@
 import books from "../data/romance.json";
-import { Container, Row, Col } from "react-bootstrap";
+import { Card, Container, Row } from "react-bootstrap";
 
-const LatestRelease = () => (
-  <Container>
-    <Row className="bg-dark justify-content-center mt-3">
-      {books.map((book) => (
-        <div className="img-container" key={book.asin}>
-          <Col xs={12} md={3}>
-            <img
-              className="d-block img-fluid img"
-              src={book.img}
-              alt={book.title}
-            />
-            <p>{book.title}</p>
-          </Col>
-        </div>
-      ))}
-    </Row>
-  </Container>
-);
+const LatestRelease = () => {
+  return (
+    <Container>
+      <Row>
+        {books.map((book) => (
+          <div key={book.asin}>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src={book.img} />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+        ))}
+      </Row>
+    </Container>
+  );
+};
 
 export default LatestRelease;
