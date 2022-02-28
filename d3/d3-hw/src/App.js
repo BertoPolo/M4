@@ -1,19 +1,19 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import WarningSign from "./components/WarningSign";
-import MyBadge from "./components/MyBadge";
-import SingleBook from "./components/SingleBook";
-import scifiBook from "./scifi.json";
-import BookList from "./components/BookList";
+import WarningSign from "./components2/WarningSign";
+import MyBadge from "./components2/MyBadge";
+import scifi from "../src/data/scifi.json";
+import SingleBook from "./components2/SingleBook";
+import BookList from "./components2/BookList";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <WarningSign message="hello im da king" />
-        <MyBadge text="haha! maybe in your dreams" color="secondary" />
-        <SingleBook book={scifiBook[0]} />
-        <BookList books={scifiBook} />
+        <WarningSign />
+        <MyBadge text={"hello MF "} color={"success"} />
+        <SingleBook book={scifi[3]} />
+        <BookList book={scifi} />
       </header>
     </div>
   );
